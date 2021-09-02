@@ -1,0 +1,123 @@
+:root {
+--nardo-: #c0c6c8;
+--company-orange: #cc6500;
+--side-panel-bg: #333;
+--side-panel-txt: #666;
+
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    z-index: 10000;
+    background: #333;
+    color: #666;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  #sidebar a {
+    color: #999;
+    transition: color 0.3s ease-out;
+    text-decoration: none;
+  }
+
+  #sidebar a:hover {
+    color:#fff;
+  }
+  
+  #sidebar.active {
+    right: 0;
+  }
+  
+  #dismiss {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    line-height: 35px;
+    text-align: center;
+    background: #333;
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  #dismiss:hover {
+    background: var(--hover-);
+    color: white;
+  }
+  
+  .screen-overlay{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .screen-overlay.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .hidden-panel-content {
+    padding: 3.65em 10%;
+  }
+  
+  .hidden-panel-nav {
+    border-bottom: 1px solid #666;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.25);
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    text-transform: uppercase;
+  }
+  .hidden-panel-nav h3 {
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+  }
+  .hidden-panel-nav ul {
+    list-style: none;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
+  .hidden-panel-nav li {
+    padding: 0.25em 0;
+  }
+
+  .hidden-panel-text {
+    border-bottom: 1px solid #666;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.25);
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+  }
+  .hidden-panel-text p {
+    margin-bottom: 1.5em;
+  }
+  .hidden-panel-text p:last-child {
+    margin-bottom: 0;
+    margin-bottom: 1.5em;
+  }
+  
+  .hidden-panel-credits {
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+  .hidden-panel-credits span {
+    display: block;
+    margin-bottom: 0.15em;
+  }
+  
